@@ -139,7 +139,7 @@ plugin_info_t Plugin_info = {
 };
 
 // Metamod requesting info about this plugin
-C_DLLEXPORT int Meta_Query(char *, plugin_info_t **pPlugInfo,
+C_DLLEXPORT int Meta_Query(const char *, plugin_info_t **pPlugInfo,
                            mutil_funcs_t *pMetaUtilFuncs) 
 {
    *pPlugInfo = &Plugin_info; // Give metamod our plugin_info struct

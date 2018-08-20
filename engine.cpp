@@ -40,7 +40,7 @@ void (*botMsgFunction)(void *, int) = NULL;
 void (*botMsgEndFunction)(void *, int) = NULL;
 int botMsgIndex;
 
-void pfnClientCommand(edict_t* pEdict, char* szFmt, ...)
+void pfnClientCommand(edict_t* pEdict, const char* szFmt, ...)
 {
    if (!(pEdict->v.flags & FL_FAKECLIENT))
       RETURN_META(MRES_IGNORED);
