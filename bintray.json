@@ -1,0 +1,41 @@
+{
+    "package": {
+        "name": "autobuild",
+        "repo": "ricobot",
+        "subject": "bots-united",
+        "desc": "Bot for Ricochet",
+        "website_url": "http://yapb.bots-united.com",
+        "issue_tracker_url": "https://github.com/Bots-United/ricobot/issues",
+        "github_repo": "Bots-United/ricobot",
+        "vcs_url": "https://github.com/Bots-United/ricobot.git",
+        "github_use_tag_release_notes": true,
+        "github_release_notes_file": "RELEASE.txt",
+        "licenses": ["BSD"],
+        "labels": ["game", "c", "metamod"],
+        "public_download_numbers": true,
+        "public_stats": true,
+        "attributes": [
+        ]
+    },
+
+    "version": {
+        "name": "@VERSION@",
+        "desc": "@DESC@",
+        "released": "@RELEASE_DATE@",
+        "vcs_tag": "@VCS_TAG@",
+        "attributes": [
+         {"name": "Author",		"values" : ["@AUTHOR@"],   		"type": "string"},
+         {"name": "AuthorDate",	"values" : ["@AUTHOR_DATE@"],   "type": "string"},
+         {"name": "Commiter",	"values" : ["@COMMITER@"], 		"type": "string"},
+         {"name": "Branch",		"values" : ["@BRANCH@"],   		"type": "string"},
+         {"name": "CommitID", 	"values" : ["@COMMITID@"], 		"type": "string"}
+        ]
+    },
+
+    "files":
+        [
+        {"includePattern": "deploy/(.*)", 
+         "uploadPattern": "@VERSION@/$1"}
+        ],
+    "publish": true
+}
